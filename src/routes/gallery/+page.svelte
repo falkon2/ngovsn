@@ -5,6 +5,7 @@
     import Footer from '../../components/Footer.svelte';
     import AdSense from '../../components/AdSense.svelte';
 
+
     const galleryItems = [
         {
             title: "Group",
@@ -195,6 +196,10 @@
 
     onMount(() => {
         fadeIn('.gallery-content');
+        lightbox.option({
+            'resizeDuration': 200,
+            'wrapAround': true
+        });
     });
 </script>
 
@@ -203,8 +208,8 @@
 <div class="gallery-content min-h-screen bg-gray-50">
     <div class="max-w-[2000px] mx-auto p-4">
         <div class="gallery-grid">
-            {#each galleryItems as item}
-                <div class="gallery-item {item.size}">
+            {#each galleryItems as item, index}
+                <a href={item.image} data-lightbox="gallery" data-title={item.title} class="gallery-item {item.size}">
                     <div class="relative overflow-hidden w-full h-full">
                         <img 
                             src={item.image} 
@@ -218,7 +223,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </a>
             {/each}
         </div>
     </div>

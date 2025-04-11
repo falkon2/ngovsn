@@ -73,24 +73,7 @@
             </div>
             
             <!-- Newsletter -->
-            <div>
-                <h3 class="text-lg font-semibold text-white mb-4">Stay Updated</h3>
-                <p class="text-gray-400 mb-4">Subscribe to our newsletter for updates and news.</p>
-                <form class="flex">
-                    <input 
-                        type="email" 
-                        placeholder="Your email" 
-                        class="px-4 py-2 rounded-l-lg bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-green-500" 
-                        aria-label="Email for newsletter"
-                    />
-                    <button 
-                        type="submit" 
-                        class="bg-green-500 text-white px-4 py-2 rounded-r-lg hover:bg-green-600 transition-colors duration-300"
-                    >
-                        Subscribe
-                    </button>
-                </form>
-            </div>
+
         </div>
         
         <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">

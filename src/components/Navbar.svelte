@@ -55,10 +55,10 @@
 <div class="mobile-menu fixed inset-0 bg-white/90 backdrop-blur-lg z-40 md:hidden">
     <div class="container mx-auto px-4 h-screen flex flex-col items-center justify-center">
         <div class="mobile-nav-links space-y-8 text-center">
-            {#each ['Home', 'Gallery', 'About', 'Volunteer'] as link}
+            {#each ['Home', 'Gallery', 'About', 'Contact'] as link}
                 <div>
                     <a 
-                        href={link === 'Home' ? '/' : link === 'About' ? '/aboutus' : `/${link.toLowerCase()}`}
+                        href={link === 'Home' ? '/' : link === 'About' ? '/aboutus':link === 'Contact' ? '/volunteer' : `/${link.toLowerCase()}`}
                         class="mobile-nav-link block text-3xl font-bold text-gray-800 hover:text-green-600 transition-colors duration-300"
                         on:click={() => isMenuOpen = false}
                     >
