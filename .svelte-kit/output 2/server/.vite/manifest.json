@@ -1,0 +1,166 @@
+{
+  ".svelte-kit/generated/server/internal.js": {
+    "file": "internal.js",
+    "name": "internal",
+    "src": ".svelte-kit/generated/server/internal.js",
+    "isEntry": true,
+    "imports": [
+      "_internal.js"
+    ]
+  },
+  "_AdSense.BxhTx2hN.css": {
+    "file": "_app/immutable/assets/AdSense.BxhTx2hN.css",
+    "src": "_AdSense.BxhTx2hN.css"
+  },
+  "_AdSense.js": {
+    "file": "chunks/AdSense.js",
+    "name": "AdSense",
+    "imports": [
+      "_index.js",
+      "_firebase.js"
+    ],
+    "css": [
+      "_app/immutable/assets/AdSense.BxhTx2hN.css"
+    ]
+  },
+  "_animations.js": {
+    "file": "chunks/animations.js",
+    "name": "animations"
+  },
+  "_client.js": {
+    "file": "chunks/client.js",
+    "name": "client",
+    "imports": [
+      "_exports.js",
+      "_index.js"
+    ]
+  },
+  "_exports.js": {
+    "file": "chunks/exports.js",
+    "name": "exports",
+    "imports": [
+      "_index.js"
+    ]
+  },
+  "_firebase.js": {
+    "file": "chunks/firebase.js",
+    "name": "firebase",
+    "imports": [
+      "_index.js",
+      "_client.js"
+    ]
+  },
+  "_index.js": {
+    "file": "chunks/index.js",
+    "name": "index"
+  },
+  "_internal.js": {
+    "file": "chunks/internal.js",
+    "name": "internal",
+    "imports": [
+      "_index.js"
+    ]
+  },
+  "node_modules/@sveltejs/kit/src/runtime/components/svelte-5/error.svelte": {
+    "file": "entries/fallbacks/error.svelte.js",
+    "name": "entries/fallbacks/error.svelte",
+    "src": "node_modules/@sveltejs/kit/src/runtime/components/svelte-5/error.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_client.js"
+    ]
+  },
+  "node_modules/@sveltejs/kit/src/runtime/server/index.js": {
+    "file": "index.js",
+    "name": "index",
+    "src": "node_modules/@sveltejs/kit/src/runtime/server/index.js",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_internal.js",
+      "_exports.js"
+    ]
+  },
+  "src/routes/+layout.svelte": {
+    "file": "entries/pages/_layout.svelte.js",
+    "name": "entries/pages/_layout.svelte",
+    "src": "src/routes/+layout.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_firebase.js",
+      "_client.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_layout.D8BDghJ_.css"
+    ]
+  },
+  "src/routes/+page.svelte": {
+    "file": "entries/pages/_page.svelte.js",
+    "name": "entries/pages/_page.svelte",
+    "src": "src/routes/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_AdSense.js",
+      "_animations.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page.CzXHUPiB.css"
+    ]
+  },
+  "src/routes/aboutus/+page.svelte": {
+    "file": "entries/pages/aboutus/_page.svelte.js",
+    "name": "entries/pages/aboutus/_page.svelte",
+    "src": "src/routes/aboutus/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_animations.js",
+      "_AdSense.js"
+    ]
+  },
+  "src/routes/donate/+page.svelte": {
+    "file": "entries/pages/donate/_page.svelte.js",
+    "name": "entries/pages/donate/_page.svelte",
+    "src": "src/routes/donate/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_animations.js",
+      "_firebase.js",
+      "_AdSense.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page.tn0RQdqM.css"
+    ]
+  },
+  "src/routes/gallery/+page.svelte": {
+    "file": "entries/pages/gallery/_page.svelte.js",
+    "name": "entries/pages/gallery/_page.svelte",
+    "src": "src/routes/gallery/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_animations.js",
+      "_AdSense.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page.AJRoHKzc.css"
+    ]
+  },
+  "src/routes/volunteer/+page.svelte": {
+    "file": "entries/pages/volunteer/_page.svelte.js",
+    "name": "entries/pages/volunteer/_page.svelte",
+    "src": "src/routes/volunteer/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_AdSense.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page.CR2wynOt.css"
+    ]
+  }
+}

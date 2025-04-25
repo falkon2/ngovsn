@@ -8,19 +8,7 @@
     let gsap;
     let ScrollTrigger;
 
-    let name = '';
-    let email = '';
-    let message = '';
-    let selectedInterest = '';
-
-    const interests = [
-        'Animal Rescue',
-        'Feeding Program',
-        'Medical Support',
-        'Foster Care',
-        'Social Media',
-        'Event Organization'
-    ];
+    // Google Form is used instead of native form
 
     onMount(async () => {
         if (browser) {
@@ -65,25 +53,7 @@
         }
     });
 
-    function handleSubmit(e) {
-        e.preventDefault();
-        
-        // Create email body with form data
-        const emailBody = `
-Name: ${name}
-Email: ${email}
-Area of Interest: ${selectedInterest}
-
-Message:
-${message}
-        `.trim();
-
-        // Create mailto link
-        const mailtoLink = `mailto:vsnghy.org@gmail.com?subject=New Volunteer Inquiry - ${selectedInterest}&body=${encodeURIComponent(emailBody)}`;
-        
-        // Open email client
-        window.location.href = mailtoLink;
-    }
+    // Google Form is used for volunteer registration
 </script>
 
 <Navbar />
@@ -118,65 +88,27 @@ ${message}
         <AdSense />
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            <!-- Contact Form -->
+            <!-- Google Form Embed -->
             <div class="contact-form bg-white rounded-2xl shadow-xl p-8">
                 <h2 class="text-3xl font-bold mb-8">Get Involved</h2>
                 <p class="text-gray-600 mb-6">
                     Fill out the form below to express your interest in volunteering. 
                     We'll get back to you with more information about available opportunities.
                 </p>
-                <form on:submit={handleSubmit} class="space-y-6">
-                    <div>
-                        <label for="name" class="block text-gray-700 mb-2">Name</label>
-                        <input
-                            type="text"
-                            id="name"
-                            bind:value={name}
-                            class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-green-500 focus:ring-2 focus:ring-green-200 transition-colors duration-200"
-                            required
-                        />
-                    </div>
-                    <div>
-                        <label for="email" class="block text-gray-700 mb-2">Email</label>
-                        <input
-                            type="email"
-                            id="email"
-                            bind:value={email}
-                            class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-green-500 focus:ring-2 focus:ring-green-200 transition-colors duration-200"
-                            required
-                        />
-                    </div>
-                    <div>
-                        <label for="interest" class="block text-gray-700 mb-2">Area of Interest</label>
-                        <select
-                            id="interest"
-                            bind:value={selectedInterest}
-                            class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-green-500 focus:ring-2 focus:ring-green-200 transition-colors duration-200"
-                            required
-                        >
-                            <option value="">Select an area</option>
-                            {#each interests as interest}
-                                <option value={interest}>{interest}</option>
-                            {/each}
-                        </select>
-                    </div>
-                    <div>
-                        <label for="message" class="block text-gray-700 mb-2">Message</label>
-                        <textarea
-                            id="message"
-                            bind:value={message}
-                            rows="4"
-                            class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-green-500 focus:ring-2 focus:ring-green-200 transition-colors duration-200 resize-none"
-                            required
-                        ></textarea>
-                    </div>
-                    <button
-                        type="submit"
-                        class="w-full bg-green-500 text-white py-3 rounded-lg hover:bg-green-600 transition-colors duration-300 transform hover:scale-[1.02]"
+                <div class="iframe-container overflow-hidden">
+                    <iframe 
+                        src="https://docs.google.com/forms/d/e/1FAIpQLScktVhk5ZCiticLRx4P1-kf8DDBuVzidSxrygoEqt09HiWieA/viewform?embedded=true" 
+                        width="100%" 
+                        height="600" 
+                        frameborder="0" 
+                        marginheight="0" 
+                        marginwidth="0"
+                        class="rounded-lg"
+                        title="Volunteer Registration Form"
                     >
-                        Send Message
-                    </button>
-                </form>
+                        Loading…
+                    </iframe>
+                </div>
             </div>
 
             <!-- Info Section -->
@@ -189,8 +121,8 @@ ${message}
                             </svg>
                         </div>
                         <div>
-                            <h3 class="text-xl font-bold mb-2">Flexible Schedule</h3>
-                            <p class="text-gray-600">Choose your own hours and commitment level. Every minute you can spare makes a difference.</p>
+                            <h3 class="text-xl font-bold mb-2">Training Provided</h3>
+                            <p class="text-gray-600">We provide comprehensive training and support to ensure you're confident in your role.</p>
                         </div>
                     </div>
                 </div>
@@ -203,8 +135,8 @@ ${message}
                             </svg>
                         </div>
                         <div>
-                            <h3 class="text-xl font-bold mb-2">Training Provided</h3>
-                            <p class="text-gray-600">We provide comprehensive training and support to ensure you're confident in your role.</p>
+                            <h3 class="text-xl font-bold mb-2">Certificate Provided</h3>
+                            <p class="text-gray-600">We Provide an official certificate for your role and taking part in our organization. This will help you in your resume and for getting into universities as well as in jobs.</p>
                         </div>
                     </div>
                 </div>
@@ -279,5 +211,24 @@ ${message}
 <style>
     :global(.info-card) {
         backface-visibility: hidden;
+    }
+    
+    .iframe-container {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        border-radius: 0.5rem;
+    }
+    
+    .iframe-container iframe {
+        border: none;
+        width: 100%;
+        min-height: 600px;
+    }
+    
+    @media (max-width: 768px) {
+        .iframe-container iframe {
+            min-height: 650px; /* Slightly taller on mobile */
+        }
     }
 </style>

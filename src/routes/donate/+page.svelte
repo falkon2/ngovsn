@@ -30,7 +30,7 @@
                 <div class="text-center mb-8">
                     <h2 class="text-2xl font-bold text-gray-800 mb-4">How to Donate</h2>
                     <p class="text-gray-600 mb-6">
-                        We are currently updating our online donation system. In the meantime, you can support us through the following methods:
+                        You can support us through the following methods:
                     </p>
                 </div>
 
