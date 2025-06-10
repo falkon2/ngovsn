@@ -83,7 +83,7 @@
             <p class="mb-2">© {new Date().getFullYear()} Voice of Strays and Nature. All rights reserved.</p>
             <p class="text-sm flex items-center justify-center gap-2">
                 Made with <span class="text-red-500">❤️</span> by 
-                <a href="https://github.com/falkon2" 
+                <a href="https://zahintapadar.me" 
                    class="text-gray-400 hover:text-white transition-colors duration-300 underline">
                     @Zahin Tapadar
                 </a>
